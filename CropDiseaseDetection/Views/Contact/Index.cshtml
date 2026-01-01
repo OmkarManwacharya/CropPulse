@@ -1,0 +1,30 @@
+﻿@model CropPulse.Models.Contact
+
+<div class="contact-container">
+    <div class="contact-header">
+        <i class="bi bi-envelope-check" style="font-size: 3rem; color: var(--leaf-green);"></i>
+        <h2>Contact Expert</h2>
+        <p class="text-muted">Send your crop query to our agricultural specialists</p>
+    </div>
+
+    <form asp-action="Submit" method="post">
+        <div class="form-group">
+            <label asp-for="Name">Full Name</label>
+            <input asp-for="Name" class="form-control" placeholder="Enter your name" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Email">Email Address</label>
+            <input asp-for="Email" class="form-control" type="email" placeholder="farmer@example.com" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Subject">Topic / Crop Name</label>
+            <input asp-for="Subject" class="form-control" placeholder="e.g. Tomato Blight" />
+        </div>
+
+        <button type="submit" class="btn-contact-submit mt-3">
+            Send Inquiry
+        </button>
+    </form>
+</div>

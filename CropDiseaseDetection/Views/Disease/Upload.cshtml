@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Scan Crop";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-lg border-0 overflow-hidden" style="border-radius: 20px;">
+                <div class="card-header bg-success text-white p-4 text-center border-0" style="background: linear-gradient(135deg, #2d6a4f, #40916c);">
+                    <i class="bi bi-camera-fill display-4 mb-2"></i>
+                    <h2 class="fw-bold">AI Disease Scanner</h2>
+                    <p class="mb-0 opacity-75">Upload a clear photo of the leaf for instant diagnosis</p>
+                </div>
+
+                <div class="card-body p-4 p-md-5 bg-white">
+                    <form asp-controller="Disease" asp-action="Upload" method="post" enctype="multipart/form-data">
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold text-success">
+                                <span class="badge bg-success me-2">1</span> Select Leaf Image
+                            </label>
+                            <div class="input-group custom-file-button">
+                                <input type="file" name="imageFile" class="form-control" id="imageInput" required accept="image/*">
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold text-success">
+                                <span class="badge bg-success me-2">2</span> Choose Crop Type
+                            </label>
+                            <select name="crop" class="form-select border-success-subtle py-2">
+                                <option value="Tomato">Tomato</option>
+                                <option value="Potato">Potato</option>
+                                <option value="Corn">Corn / Maize</option>
+                                <option value="Wheat">Wheat</option>
+                                <option value="Grapes">Grapes</option>
+                            </select>
+                        </div>
+
+                        <div class="d-grid mt-5">
+                            <button type="submit" class="btn btn-success btn-lg py-3 shadow-sm fw-bold border-0" style="background-color: #2d6a4f; border-radius: 12px;">
+                                <i class="bi bi-search me-2"></i> DETECT DISEASE
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="mt-4 p-3 bg-light rounded-3 border">
+                <h6 class="fw-bold text-dark mb-2"><i class="bi bi-lightbulb text-warning me-2"></i>Scanning Tips:</h6>
+                <ul class="small text-muted mb-0">
+                    <li>Ensure the leaf is in natural daylight (avoid shadows).</li>
+                    <li>Keep the leaf flat and fill as much of the frame as possible.</li>
+                    <li>Ensure the camera is focused on the infected spots.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

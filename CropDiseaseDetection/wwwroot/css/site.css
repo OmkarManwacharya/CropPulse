@@ -1,0 +1,94 @@
+/* --- Global Agricultural Palette --- */
+:root {
+    --forest-green: #1b4332;
+    --leaf-green: #2d6a4f;
+    --mint-bg: #f8fcf9;
+    --input-bg: #ffffff;
+    --soft-border: #d8f3dc;
+}
+
+body {
+    background-color: var(--mint-bg);
+    color: var(--forest-green);
+}
+
+/* --- Form Layout & Cards --- */
+.contact-container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(27, 67, 50, 0.08);
+    border: 1px solid var(--soft-border);
+}
+
+/* Form Headers */
+.contact-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+    .contact-header h2 {
+        color: var(--leaf-green);
+        font-weight: 700;
+    }
+
+/* --- Input Styling --- */
+.form-control {
+    border-radius: 12px;
+    border: 1.5px solid #e9ecef;
+    padding: 0.8rem 1rem;
+    background-color: var(--input-bg);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 1.2rem;
+}
+
+    .form-control:focus {
+        border-color: var(--leaf-green);
+        background-color: #fff;
+        box-shadow: 0 0 0 0.25rem rgba(45, 106, 79, 0.1);
+        outline: 0;
+    }
+
+/* Label Styling */
+label {
+    font-weight: 600;
+    color: var(--forest-green);
+    margin-bottom: 0.4rem;
+    display: block;
+}
+
+/* --- Submit Button --- */
+.btn-contact-submit {
+    background-color: var(--leaf-green);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 1rem;
+    font-weight: 700;
+    width: 100%;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+    .btn-contact-submit:hover {
+        background-color: var(--forest-green);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(27, 67, 50, 0.2);
+        color: white;
+    }
+
+    .btn-contact-submit:active {
+        transform: translateY(-1px);
+    }
+
+/* --- Validation Styling --- */
+.field-validation-error {
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: -0.8rem;
+    margin-bottom: 1rem;
+    display: block;
+}
